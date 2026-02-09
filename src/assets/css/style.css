@@ -1,0 +1,292 @@
+/* =========================
+   Reset & Basics
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Ubuntu, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   Layout
+   ========================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+.site-header {
+  margin: 0;
+  line-height: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 3px solid #0000Af;
+}
+/*  background-image: url('/assets/background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;}
+*/
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1,5rem;
+}
+
+.header-logo {
+  height: 110px;
+  width: auto;
+}
+
+.header-mid {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+}
+
+.header-mid h1 {
+  margin: 0;
+  color: #0000Af;
+  font-family: "Ruda", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.header-icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.header-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0000Af;
+  transition: color 0.2s ease;
+}
+
+.header-icons a:hover {
+  color: #3333cf;
+}
+
+.header-icons svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.header-nav {
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.header-nav a {
+  color: #444444;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #3333cf;
+  text-decoration: underline;
+}
+
+/* Untere Zeile - wird nicht mehr benötigt */
+.header-bottom {
+  display: none;
+}
+
+.about-img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
+/* =========================
+   Typography
+   ========================= */
+
+.header-subtitel{
+  font-size: 1em;
+  font-weight: bold;
+  color: #444444;
+}
+
+.subtitle {
+  font-size: 1em;
+  font-weight: bold;
+  color: #444444;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  color: #0000Af;
+  font-family: "Ruda", sans-serif;
+}
+
+h3{
+  line-height: 1.3;
+  margin-top: 2rem;
+  color: #f8fAFC;
+  font-family: "Ruda", sans-serif;
+}
+
+article h1, h2 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  color: #333333;
+  font-family: "Ruda", sans-serif;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* =========================
+   Episodenliste
+   ========================= */
+.episodes {
+  list-style: none;
+  padding: 0;
+}
+
+.episodes li {
+  border-bottom: 2px solid #333333;
+  padding: 1.25rem 0;
+}
+
+.episodes h2 {
+  margin: 0;
+}
+
+/* =========================
+   Episode Detailseite
+   ========================= */
+.episode .description {
+  font-size: 0.9rem;
+}
+
+.episode .meta {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.audio-player audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #333333;
+  border-top: 3px solid #0000Af;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex-end;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #94a3b8;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+  .header-top {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+  
+  .header-mid {
+    text-align: left;
+  }
+  
+  .header-mid h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-icons {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 1,5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .header-bottom {
+    justify-content: center;
+  }
+}

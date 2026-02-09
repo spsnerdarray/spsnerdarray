@@ -1,0 +1,5 @@
+.DS_Store
+/notes-and-archive/
+node_modules/
+/_site/
+/audio/
